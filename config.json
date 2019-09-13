@@ -2,6 +2,23 @@
   "endpoints": [
     {
       "route": "/special",
+      "methods":["get","post"],
+      "modes": [
+        {
+          "delay": 0,
+          "status": 200,
+          "text": "<pre>I'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 404,
+          "text": "<pre>The web page you seek\n\nLies beyond our perception\n\nBut others await.</pre>"
+        }
+      ]
+    },
+    {
+      "route": "/special2",
+      "methods":["get","post"],
       "modes": [
         {
           "delay": 0,
@@ -17,6 +34,7 @@
     },
     {
       "route": "/*",
+      "methods":["get","post"],
       "modes": [
         {
           "delay": 0,
