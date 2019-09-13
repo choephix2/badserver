@@ -1,0 +1,14 @@
+{
+  "name": "badserver",
+  "version": "0.0.1",
+  "description": "Configurable server, to deliberately return chosen mock and error responses.",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js 18181"
+  },
+  "author": "cx",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

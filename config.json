@@ -1,0 +1,55 @@
+{
+  "endpoints": [
+    {
+      "route": "/special",
+      "modes": [
+        {
+          "delay": 0,
+          "status": 200,
+          "text": "<pre>I'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 404,
+          "text": "<pre>The web page you seek\n\nLies beyond our perception\n\nBut others await.</pre>"
+        }
+      ]
+    },
+    {
+      "route": "/*",
+      "modes": [
+        {
+          "delay": 0,
+          "status": 200,
+          "text": "<pre>I'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 404,
+          "text": "<pre>The web page you seek\n\nLies beyond our perception\n\nBut others await.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 503,
+          "text": "<pre>With searching comes loss...\n\nThe presence of absence...\n\nThe server is down.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 504,
+          "text": "<pre>The code was willing\n\nIt considered your request,\n\nBut the chips were weak.</pre>"
+        },
+        {
+          "delay": 0,
+          "status": 505,
+          "text": "<pre>We wish to hold the whole sky\n\nBut we never will\n\nSystem out of memory.</pre>"
+        },
+        {
+          "name": "Wait",
+          "delay": 5,
+          "status": 200,
+          "text": "<pre>The traffic was bad\n\nThe cops were very active\n\nAm I late for something?</pr>"
+        }
+      ]
+    }
+  ]
+}
