@@ -10,9 +10,9 @@
           "text": "Hi there."
         },
         {
-          "delay": 0,
-          "status": 404,
-          "text": "<pre>The web page you seek\n\nLies beyond our perception\n\nBut others await.</pre>"
+          "delay": 5000,
+          "status": 200,
+          "text": "Am I late for something?"
         }
       ]
     },
@@ -22,13 +22,18 @@
       "modes": [
         {
           "delay": 0,
-          "status": 200,
-          "text": "<pre>I'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.</pre>"
+          "status": 404,
+          "text": "<pre> You step in the stream \n\n But the water has moved on \n\n Page not found. </pre>"
         },
         {
           "delay": 0,
-          "status": 404,
-          "text": "<pre>The web page you seek\n\nLies beyond our perception\n\nBut others await.</pre>"
+          "status": 507,
+          "text": "<pre> A file that big? \n\n It might be very useful \n\n But now it is gone. </pre>"
+        },
+        {
+          "delay": 0,
+          "status": 500,
+          "text": "<pre> To have no errors \n\n Would be life without meaning \n\n ERROR: Fatal Exception </pre>"
         }
       ]
     },
@@ -58,14 +63,23 @@
         },
         {
           "delay": 0,
-          "status": 505,
+          "status": 502,
+          "text": "<pre> Yesterday it worked \n\n Today it is not working \n\n Servers are like that. </pre>"
+        },
+        {
+          "delay": 0,
+          "status": 507,
           "text": "<pre>We wish to hold the whole sky\n\nBut we never will\n\nSystem out of memory.</pre>"
         },
         {
-          "name": "Wait",
-          "delay": 5,
-          "status": 200,
-          "text": "<pre>The traffic was bad\n\nThe cops were very active\n\nAm I late for something?</pr>"
+          "delay": 0,
+          "status": 509,
+          "text": "<pre> Three things are certain \n\n Death, taxes, and lost data \n\n Guess which has occurred. </pre>"
+        },
+        {
+          "delay": 0,
+          "status": 401,
+          "text": "<pre> Login incorrect \n\n Only perfect spellers may \n\n enter this system. </pre>"
         }
       ]
     }
