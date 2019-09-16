@@ -1,13 +1,13 @@
 {
   "endpoints": [
     {
-      "route": "/special",
-      "methods":["get","post"],
+      "route": "/one",
+      "methods":["get"],
       "modes": [
         {
           "delay": 0,
           "status": 200,
-          "text": "<pre>I'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.\n\nI'm ok.</pre>"
+          "text": "Hi there."
         },
         {
           "delay": 0,
@@ -17,7 +17,7 @@
       ]
     },
     {
-      "route": "/special2",
+      "route": "/two",
       "methods":["get","post"],
       "modes": [
         {
