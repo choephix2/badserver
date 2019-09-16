@@ -4,7 +4,7 @@
   "description": "Configurable server, to deliberately return chosen mock and error responses.",
   "main": "serve.js",
   "scripts": {
-    "start": "node serve.js 18181"
+    "start": "node serve.js"
   },
   "author": "cx",
   "license": "ISC",

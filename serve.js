@@ -2,7 +2,7 @@ const config = require("./config.json")
 const express = require("express")
 const app = express()
 
-const PORT = parseInt(process.argv[2])
+const PORT = parseInt(process.argv[2]) || process.env.PORT || 80
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
@@ -20,8 +20,7 @@ for ( let endpoint of config.endpoints )
 async function respond( req, res, cfg ) {
   let mode = cfg.modes[cfg.current_mode_index]
   if ( mode.delay )
-    for ( let i = 0 ; i < mode.delay ; i++ )
-      await timeout(1000)
+    await timeout( mode.delay )
   res.status( mode.status ).send( mode.text )
 }
 
