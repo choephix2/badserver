@@ -4,8 +4,8 @@
 
 ## Evironment variables
 
-* *PORT* (for the server to listen on)
+* **PORT** (for the server to listen on)
 
 ## Configuration
 
-Edit 'config.json' (or mount your own file over it if using Docker)
+Edit '**config.json**' (or mount your own file over it if using Docker)
