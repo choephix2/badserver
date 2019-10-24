@@ -1,8 +1,10 @@
-const config = require("./config.json")
 const express = require("express")
 const app = express()
 
-const PORT = parseInt(process.argv[2]) || process.env.PORT || 80
+const CONFIG_FILE = parseInt(process.argv[2]) || process.env.CONFIG_FILE || "./config.example.json"
+const config = require( CONFIG_FILE )
+
+const PORT = process.env.PORT || 80
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
