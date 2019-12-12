@@ -1,10 +1,31 @@
+const yargs = require('yargs');
 const express = require("express")
 const app = express()
+const argv = yargs
+    .option('config', {
+        alias: 'c',
+        description: 'Configuration file path',
+        type: 'string',
+    })
+    .option('port', {
+        alias: 'p',
+        description: 'Port',
+        type: 'number',
+    })
+    .help().alias('help', 'h')
+    .argv;
 
-const CONFIG_FILE = parseInt(process.argv[2]) || process.env.CONFIG_FILE || "./config.example.json"
-const config = require( CONFIG_FILE )
+const CONFIG_FILE = argv.config || process.env.CONFIG_FILE || "./config.example.json"
+let config = require( CONFIG_FILE )
 
-const PORT = process.env.PORT || 80
+// const fs = require('fs');
+// fs.watchFile( CONFIG_FILE, (curr, prev) => {
+//   console.log(`${CONFIG_FILE} file Changed`)
+//   config = require( CONFIG_FILE )
+//   draw()
+// } )
+
+const PORT = argv.port || process.env.PORT || 80
 
 const timeout = ms => new Promise(res => setTimeout(res, ms))
 
@@ -25,6 +46,8 @@ async function respond( req, res, cfg ) {
     await timeout( mode.delay )
   res.status( mode.status ).send( mode.text )
 }
+
+server = app.listen( PORT, () => draw() )
 
 var stdin = process.stdin;
 stdin.setRawMode(true);
@@ -74,4 +97,3 @@ function draw() {
   console.log( topbar, '\n' )
   console.log( endpoint.modes[endpoint.current_mode_index] )
 }
-server = app.listen( PORT, () => draw() )

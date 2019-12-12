@@ -4,11 +4,12 @@
   "description": "Configurable server, to deliberately return chosen mock and error responses.",
   "main": "serve.js",
   "scripts": {
-    "start": "node serve.js"
+    "start": "node serve.js --port 1118 --config ./config.json"
   },
   "author": "cx",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "yargs": "^15.0.2"
   }
 }
